@@ -1,0 +1,9 @@
+class Solution {
+public:
+    bool checkOverlap(int radius, int xc, int yc, int x1, int y1, int x2, int y2) {
+        int dx = max(x1, min(xc,x2));
+        int dy = max(y1, min(yc,y2));
+
+        return (dx - xc) * (dx - xc) + (dy - yc) * (dy - yc) <= (radius*radius);
+    }
+};
